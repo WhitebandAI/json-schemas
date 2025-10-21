@@ -1,0 +1,144 @@
+{
+	"$id": "https://schema.whiteband.ai/judgment/content/v1.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"citations": {
+			"type": "array",
+			"items": [
+				{
+					"$ref": "/judgment/content/components/citation/v1.json"
+				}
+			]
+		},
+		"court": {
+			"type": "string"
+		},
+		"judges": {
+			"type": "array",
+			"items": [
+				{
+					"$ref": "/judgment/content/components/judge/v1.json"
+				}
+			]
+		},
+		"extras": {
+			"type": "object",
+			"properties": {
+				"id": {
+					"type": "integer"
+				},
+				"ico_status_id": {
+					"type": "integer"
+				}
+			},
+			"required": [
+				"id",
+				"ico_status_id"
+			]
+		},
+		"relevancy": {
+			"$ref": "/judgment/content/components/relevancy/v1.json"
+		},
+		"lawyers": {
+			"type": "object",
+			"properties": {
+				"left": {
+					"type": "array",
+					"items": {}
+				},
+				"right": {
+					"type": "array",
+					"items": {}
+				}
+			},
+			"required": [
+				"left",
+				"right"
+			]
+		},
+		"parties": {
+			"type": "object",
+			"properties": {
+				"left": {
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"uuid": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"name",
+								"uuid"
+							]
+						}
+					]
+				},
+				"right": {
+					"type": "array",
+					"items": [
+						{
+							"type": "object",
+							"properties": {
+								"name": {
+									"type": "string"
+								},
+								"uuid": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"name",
+								"uuid"
+							]
+						}
+					]
+				}
+			},
+			"required": [
+				"left",
+				"right"
+			]
+		},
+		"content_blocks": {
+			"type": "array",
+			"items": [
+				{
+					"type": "object",
+					"properties": {
+						"uuid": {
+							"type": "string"
+						},
+						"type": {
+							"type": "string"
+						},
+						"content": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"uuid",
+						"type",
+						"content"
+					]
+				}
+			]
+		}
+	},
+	"required": [
+		"citations",
+		"court",
+		"judges",
+		"extras",
+		"relevancy",
+		"lawyers",
+		"parties",
+		"content_blocks"
+	]
+}

@@ -1,0 +1,74 @@
+{
+	"$id": "https://schema.whiteband.ai/judgment/submission/v1.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"version": {
+			"type": "integer",
+			"description": "Version of the judgment json format",
+			"minimum": 1,
+			"maximum": 1,
+			"default": 1
+		},
+		"uuid": {
+			"$ref": "/common/uuid/v7.json"
+		},
+		"versions": {
+			"type": "object",
+			"properties": {
+				"history": {
+					"type": "object",
+					"patternProperties": {
+						"^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$": {
+							"type": "object",
+							"properties": {
+								"timestamp": {
+									"type": "integer"
+								},
+								"notes": {
+									"type": "string"
+								}
+							},
+							"required": [
+								"timestamp",
+								"notes"
+							]
+						}
+					}
+				},
+				"submission": {
+					"type": "object",
+					"properties": {
+						"uuid": {
+							"$ref": "/common/uuid/v7.json"
+						},
+						"timestamp": {
+							"type": "integer"
+						},
+						"notes": {
+							"type": "string"
+						}
+					},
+					"required": [
+						"uuid",
+						"notes",
+						"timestamp"
+					]
+				}
+			},
+			"required": [
+				"history",
+				"submission"
+			]
+		},
+		"judgment_info": {
+			
+		}
+	},
+	"required": [
+		"version",
+		"uuid",
+		"versions",
+		"judgment_info"
+	]
+}

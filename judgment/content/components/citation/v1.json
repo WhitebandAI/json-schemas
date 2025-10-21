@@ -1,0 +1,25 @@
+{
+	"$id": "https://schema.whiteband.ai/judgment/content/components/citations/v1.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"number": {
+			"type": "string"
+		},
+		"publication": {
+			"type": "object",
+			"properties": {
+				"uuid": {
+					"$ref": "/common/uuid/v7.json"
+				}
+			},
+			"required": [
+				"uuid"
+			]
+		}
+	},
+	"required": [
+		"number",
+		"publication"
+	]
+}

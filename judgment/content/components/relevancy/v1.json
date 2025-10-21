@@ -1,0 +1,21 @@
+{
+	"$id": "https://schema.whiteband.ai/judgment/content/components/relevancy/v1.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"status": {
+			"type": "boolean"
+		},
+		"failure_severity": {
+			"type": "boolean"
+		},
+		"failure_text": {
+			"type": "string"
+		}
+	},
+	"required": [
+		"status",
+		"failure_severity",
+		"failure_text"
+	]
+}
