@@ -1,5 +1,5 @@
 {
-	"$id": "https://schema.whiteband.ai/judgment/content/components/relevancy/v1.json",
+	"$id": "https://json-schema.whiteband.ai/judgment/content/components/relevancy/v1.json",
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type": "object",
 	"properties": {
