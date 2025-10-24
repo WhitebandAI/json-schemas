@@ -12,15 +12,7 @@
 			]
 		},
 		"court": {
-			"type": "string"
-		},
-		"judges": {
-			"type": "array",
-			"items": [
-				{
-					"$ref": "/judgment/content/components/judge/v1.json"
-				}
-			]
+			"$ref": "/judgment/content/components/court/v1.json"
 		},
 		"extras": {
 			"type": "object",
@@ -40,16 +32,28 @@
 		"relevancy": {
 			"$ref": "/judgment/content/components/relevancy/v1.json"
 		},
+		"judges": {
+			"type": "array",
+			"items": [
+				{
+					"$ref": "/judgment/content/components/judge/v1.json"
+				}
+			]
+		},
 		"lawyers": {
 			"type": "object",
 			"properties": {
 				"left": {
 					"type": "array",
-					"items": {}
+					"items": {
+						"$ref": "/judgment/content/components/lawyer/v1.json"
+					}
 				},
 				"right": {
 					"type": "array",
-					"items": {}
+					"items": {
+						"$ref": "/judgment/content/components/lawyer/v1.json"
+					}
 				}
 			},
 			"required": [
@@ -64,19 +68,7 @@
 					"type": "array",
 					"items": [
 						{
-							"type": "object",
-							"properties": {
-								"name": {
-									"type": "string"
-								},
-								"uuid": {
-									"type": "string"
-								}
-							},
-							"required": [
-								"name",
-								"uuid"
-							]
+							"$ref": "/judgment/content/components/party/v1.json"
 						}
 					]
 				},
@@ -84,19 +76,7 @@
 					"type": "array",
 					"items": [
 						{
-							"type": "object",
-							"properties": {
-								"name": {
-									"type": "string"
-								},
-								"uuid": {
-									"type": "string"
-								}
-							},
-							"required": [
-								"name",
-								"uuid"
-							]
+							"$ref": "/judgment/content/components/party/v1.json"
 						}
 					]
 				}
@@ -106,27 +86,14 @@
 				"right"
 			]
 		},
+		"headnotes": {
+			"$ref": "/judgment/content/components/headnote_collection/v1.json"
+		},
 		"content_blocks": {
 			"type": "array",
 			"items": [
 				{
-					"type": "object",
-					"properties": {
-						"uuid": {
-							"type": "string"
-						},
-						"type": {
-							"type": "string"
-						},
-						"content": {
-							"type": "string"
-						}
-					},
-					"required": [
-						"uuid",
-						"type",
-						"content"
-					]
+					"$ref": "/judgment/content/components/content_block/v1.json"
 				}
 			]
 		}
@@ -139,6 +106,7 @@
 		"relevancy",
 		"lawyers",
 		"parties",
+		"headnotes",
 		"content_blocks"
 	]
 }

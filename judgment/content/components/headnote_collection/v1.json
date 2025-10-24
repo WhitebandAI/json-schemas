@@ -1,0 +1,16 @@
+{
+	"$id": "https://json-schema.whiteband.ai/judgment/content/components/headnote_collection/v1.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"headnotes": {
+			"type": "array",
+			"items": {
+				"$ref": "/judgment/content/components/headnote/v1.json"
+			}
+		}
+	},
+	"required": [
+		"headnotes"
+	]
+}

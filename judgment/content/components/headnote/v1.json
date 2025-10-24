@@ -1,0 +1,33 @@
+{
+	"$id": "https://json-schema.whiteband.ai/judgment/content/components/headnote/v1.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"content": {
+			"type": "string"
+		},
+		"held": {
+			"type": "object",
+			"properties": {
+				"paras": {
+					"type": "array",
+					"items": [
+						{
+							"type": "integer"
+						}
+					]
+				},
+				"text": {
+					"type": "string"
+				}
+			},
+			"required": [
+				"paras"
+			]
+		}
+	},
+	"required": [
+		"content",
+		"held"
+	]
+}

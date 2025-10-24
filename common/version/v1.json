@@ -1,0 +1,35 @@
+{
+	"$id": "https://json-schema.whiteband.ai/common/version/v1.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"uuid" : {
+			"$ref": "/common/uuid/v7.json"
+		},
+		"timestamp": {
+			"type": "integer"
+		},
+		"notes": {
+			"type": "string"
+		},
+		"author": {
+			"type": "object",
+			"properties": {
+				"name": {
+					"type": "string"
+				},
+				"uuid": {
+					"$ref": "/common/uuid/v7.json"
+				},
+				"signature": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"required": [
+		"uuid",
+		"timestamp",
+		"notes"
+	]
+}

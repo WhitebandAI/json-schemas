@@ -1,0 +1,25 @@
+{
+	"$id": "https://json-schema.whiteband.ai/judgment/content/components/lawyer/v1.json",
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"type": "object",
+	"properties": {
+		"name": {
+			"type": "string"
+		},
+		"uuid": {
+			"$ref": "/common/uuid/v7.json"
+		},
+		"designation": {
+			"type": "string"
+		},
+		"designation_id": {
+			"type": "integer"
+		}
+	},
+	"required": [
+		"name",
+		"uuid",
+		"designation",
+		"designation_id"
+	]
+}
