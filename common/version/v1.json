@@ -24,7 +24,10 @@
 				"signature": {
 					"type": "string"
 				}
-			}
+			},
+			"required": [
+				"name"
+			]
 		}
 	},
 	"required": [
