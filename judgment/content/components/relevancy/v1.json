@@ -6,7 +6,7 @@
 		"status": {
 			"type": "boolean"
 		},
-		"failure_severity": {
+		"is_complete_failure": {
 			"type": "boolean"
 		},
 		"failure_text": {

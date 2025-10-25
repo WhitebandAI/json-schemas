@@ -6,16 +6,8 @@
 		"number": {
 			"type": "string"
 		},
-		"publication": {
-			"type": "object",
-			"properties": {
-				"uuid": {
-					"$ref": "/common/uuid/v7.json"
-				}
-			},
-			"required": [
-				"uuid"
-			]
+		"publication_uuid": {
+			"$ref": "/common/uuid/v7.json"
 		}
 	},
 	"required": [
