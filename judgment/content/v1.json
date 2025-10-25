@@ -3,6 +3,9 @@
 	"$schema": "http://json-schema.org/draft-04/schema#",
 	"type": "object",
 	"properties": {
+		"uuid": {
+			"$ref": "/judgment/content/components/citation/v1.json"
+		},
 		"citations": {
 			"type": "array",
 			"items": [

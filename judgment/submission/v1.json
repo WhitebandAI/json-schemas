@@ -6,9 +6,6 @@
 		"version": {
 			"const": 1
 		},
-		"uuid": {
-			"$ref": "/common/uuid/v7.json"
-		},
 		"versions": {
 			"type": "object",
 			"properties": {
